@@ -12,7 +12,7 @@ export const getPosts = () => async (dispatch) => {
     }catch (error) {
         console.log(error.message());
     }
-}
+};
 
 export const createPost = (post) => async (dispatch) =>{
     try{
@@ -24,4 +24,4 @@ export const createPost = (post) => async (dispatch) =>{
     }catch (error){
         console.log(error.message);
     }
-}
+};

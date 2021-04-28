@@ -4,7 +4,7 @@ import FileBase from "react-file-base64";
 import { TextField, Button, Typography, Paper } from "@material-ui/core";
 
 import { useDispatch } from "react-redux";
-import {createPost} from "../../actions/posts";
+import { createPost } from "../../actions/posts";
 
 
 
@@ -20,7 +20,7 @@ const Form = ()=>{
     const classes = useStyles();
     const dispatch = useDispatch();
 
-    const handleSubmit = (e)=>{
+    const handleSubmit =  (e)=>{
 
         e.preventDefault();
 
