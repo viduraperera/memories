@@ -34,14 +34,13 @@ const Post = ({ post, setCurrentId })=>{
                 <Typography variant={"h6"}>{post.name}</Typography>
                 <Typography variant={"body2"}>{moment(post.createAt).fromNow()}</Typography>
             </div>
+            {(user?.result?.googleId === post?.creator || user?.result?._id === post?.creator) && (
             <div className={classes.overlay2}>
-                <Button
-                    style={{color: 'white'}}
-                    size={"small"}
-                    onClick={() => setCurrentId(post._id)}>
-                    <MoreHorizIcon fontSize={"default"}/>
+                <Button onClick={() => setCurrentId(post._id)} style={{ color: 'white' }} size="small">
+                    <MoreHorizIcon fontSize="default" />
                 </Button>
             </div>
+            )}
             <div className={classes.details}>
                 <Typography variant={"body2"} color={"textSecondary"}>{post.tags.map((tag) => `#${tag}`)}</Typography>
             </div>
